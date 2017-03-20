@@ -1,0 +1,13 @@
+{
+    "name": "group/package_post",
+    "description": "Create overview sample can intergrate other project",
+    "authors": [
+        {
+            "name": "sthunter",
+            "email": "sontung.buinguyen@gmail.com"
+        }
+    ],
+    "require": {
+        "jacopo/laravel-authentication-acl": "1.3.*"
+    }
+}
