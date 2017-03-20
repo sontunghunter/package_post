@@ -33,7 +33,8 @@ return [
     'search' => 'Search',
     'post_title_label' => 'Post title:',
     'post_title_placeholder' => 'post title',
-    'post_title'=> 'Post category title',
+    'category_id'=> 'Category',
+
 
     /**
      * Message
@@ -59,6 +60,7 @@ return [
      */
     'tab_overview' => 'Overview',
     'tab_attributes' => 'Attributes',
+    'tab_post_content' => 'Post Contents',
 
 
     ////////////////////////////////////////////////////////////////////////////

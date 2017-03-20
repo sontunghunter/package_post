@@ -16,8 +16,13 @@
     /*======================================================================*/
     // GET POST NOTES
     $post_notes = $request->get('post_notes') ? $request->get('post_notes') : @$post->post_notes;
-    
+
+    /*======================================================================*/
+    // GET LOGGED USER ID
+    $user = Sentry::getUser();
+    $user_id = $user['id'];
     ?>
+    
 
     <!--===================================================================-->
     <!--===================================================================-->
@@ -44,6 +49,8 @@
     {!! Form::text($notes, $post_notes, ['class' => 'form-control', 'placeholder' => trans('post::post_admin.notes').'']) !!}
     
     <!--===================================================================-->
+    <!-- CREATE HIDDEN USER_ID -->
+    {{ Form::hidden("user_id", $user_id) }}
 
 </div>
 <!-- /POST NAME -->

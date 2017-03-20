@@ -76,6 +76,8 @@ class Posts extends Model {
             $post->post_overview = $input['post_overview'];
             $post->post_description = $input['post_description'];
             $post->post_notes = $input['post_notes'];
+            $post->user_id_assigned = $input['user_id_assigned'];
+            $post->user_id_reviewer = $input['user_id_reviewer'];
 
             $post->save();
 
@@ -91,7 +93,6 @@ class Posts extends Model {
      * @return type
      */
     public function add_post($input) {
-
         $post = self::create([
                     'post_title' => $input['post_title'],
                     'post_overview' => $input['post_overview'],
@@ -99,6 +100,8 @@ class Posts extends Model {
                     'post_notes' => $input['post_notes'],
                     'user_id_assigned' => $input['user_id_assigned'],
                     'user_id_reviewer' => $input['user_id_reviewer'],
+                    'user_id' => $input['user_id'],
+                    'category_id' => $input['category_id'],
                     
 
         ]);

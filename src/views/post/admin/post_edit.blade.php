@@ -54,6 +54,11 @@ Admin area: {{ trans('post::post_admin.page_edit') }}
                                         {!! trans('post::post_admin.tab_attributes') !!}
                                     </a>
                                 </li>
+                                <li>
+                                    <a data-toggle="tab" href="#menu2">
+                                        {!! trans('post::post_admin.tab_post_content') !!}
+                                    </a>
+                                </li>
                             </ul>
 
                             <div class="tab-content">

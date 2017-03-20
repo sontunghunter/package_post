@@ -7,6 +7,7 @@ use Route,
     Redirect;
 use Group\Post\Models\Posts;
 use Group\Post\Models\Users;
+use Group\Post\Models\Categories;
 
 /**
  * Validators
@@ -24,7 +25,8 @@ class PostAdminController extends Controllers {
 
     public function __construct() {
         $this->obj_post = new Posts();
-         $this->obj_users = new Users;
+        $this->obj_users = new Users();
+        $this->obj_categories = new Categories();
     }
 
     /**
@@ -62,7 +64,8 @@ class PostAdminController extends Controllers {
         $this->data_view = array_merge($this->data_view, array(
             'post' => $post,
             'request' => $request,
-            'users' => $this->obj_users->pluckSelect()
+            'users' => $this->obj_users->pluckSelect(),
+            'categories' => $this->obj_categories->pluckSelect()
         ));
 
       

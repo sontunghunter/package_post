@@ -33,6 +33,7 @@ class Users extends Model {
         }
         $user = $eloquent->paginate(10);
         return $user;
+        
     }
 
     /**

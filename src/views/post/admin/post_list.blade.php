@@ -7,6 +7,7 @@ Admin area: {{ trans('post::post_admin.page') }}
 @section('content')
 
 <div class="row">
+
     <div class="col-md-12">
         <div class="col-md-8">
 
