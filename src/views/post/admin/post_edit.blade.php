@@ -3,6 +3,13 @@
 @section('title')
 Admin area: {{ trans('post::post_admin.page_edit') }}
 @stop
+
+@section('head_css')
+<script src="/posts/ckeditor/ckeditor.js"></script>
+<script src="/posts/js/post_desription.js"></script>
+
+@stop
+
 @section('content')
 
 <div class="row">
@@ -83,6 +90,15 @@ Admin area: {{ trans('post::post_admin.page_edit') }}
                                     @include('post::post.elements.select', ['user_id' => 'user_id'])
                                     <!-- /END POST ATTRIBUTES -->
                                 </div>
+
+                                <div id="menu2" class="tab-pane fade">
+                                    <!-- POST CONTENT-->
+
+                                    @include('post::post.elements.content', [
+                                    'description' => 'post_description'])
+                                    <!-- /END POST CONTENT -->
+                                </div>
+
                             </div>
 
                             

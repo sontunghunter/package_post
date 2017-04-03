@@ -23,6 +23,9 @@ class PostServiceProvider extends ServiceProvider {
          $this->publishes([
             __DIR__.'/config/post_admin.php' => config_path('post_admin.php'),
         ],'config');
+         $this->publishes([
+            __DIR__.'/public' => public_path('posts'),
+        ], 'public');
 
         $this->loadViewsFrom(__DIR__ . '/views', 'post');
 

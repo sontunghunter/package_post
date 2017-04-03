@@ -51,7 +51,7 @@ Admin area: {{ trans('post::post_admin.page') }}
 <!-- DELETE CONFIRM -->
 <script>
     $(".delete").click(function () {
-        return confirm({{ trans('post:post_admin.delete_confirm') }});
+        return confirm("Are you sure to delete this item?");
     });
 </script>
 <!-- /END DELETE CONFIRM -->

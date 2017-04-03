@@ -93,6 +93,7 @@ class Posts extends Model {
      * @return type
      */
     public function add_post($input) {
+        
         $post = self::create([
                     'post_title' => $input['post_title'],
                     'post_overview' => $input['post_overview'],

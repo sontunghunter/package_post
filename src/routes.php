@@ -5,10 +5,16 @@ use Illuminate\Session\TokenMismatchException;
 /**
  * FRONT
  */
-Route::get('post', [
-    'as' => 'post',
-    'uses' => 'Group\Post\Controllers\Front\PostFrontController@index'
-]);
+Route::group(['middleware' => ['web']], function () {
+
+    Route::group(['middleware' => ['admin_logged', 'can_see']], function () {
+        
+        Route::get('post', [
+            'as' => 'post',
+            'uses' => 'Group\Post\Controllers\Front\PostFrontController@index'
+        ]);
+    });
+});
 
 
 /**

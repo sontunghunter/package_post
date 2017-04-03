@@ -19,7 +19,7 @@ class Controllers extends Controller {
     }
 
     public function addFlashMessage($message_key, $message_value) {
-        \Session::flash('message', trans('sample::sample_admin.message_add_successfully'));
+        \Session::flash('message', trans('post::post_admin.message_add_successfully'));
     }
 
 }
